@@ -1,54 +1,17 @@
-# Customer-Support-KPI-Dashboard
-Customer Support KPI Dashboard using Excel and Power BI. Analyzes ticket volume, SLA compliance, resolution time, customer satisfaction, and escalation trends.
+Total Tickets	Total Tickets = COUNTROWS(Table1_2)
 
-## 📌 Project Overview
+Resolved Tickets	Resolved Tickets = CALCULATE(COUNTROWS(Table1_2), Table1_2[Status] = "Resolved")
 
-This project analyzes customer support ticket data to evaluate support team performance and identify key operational trends.
+SLA Met Tickets	SLA Met Tickets = CALCULATE(COUNTROWS(Table1_2), Table1_2[SLA_Status] = "SLA Met")
 
-The dashboard focuses on ticket volume, SLA compliance, resolution time, customer satisfaction, and escalation rates.
+SLA Breached Tickets	SLA Breached Tickets = CALCULATE(COUNTROWS(Table1_2), Table1_2[SLA_Status] = "SLA Breached")
 
-## 🛠️ Tools & Technologies
+SLA Compliance %	SLA Compliance % = DIVIDE([SLA Met Tickets], [SLA Met Tickets] + [SLA Breached Tickets])
 
-- Microsoft Excel
-- Power BI
-- Power Query
-- DAX
+Average Resolution Hours	Average Resolution Hours = AVERAGE(Table1_2[Resolution_Hours])
 
-## 📊 Key KPIs
+Average Customer Rating	Average Customer Rating = AVERAGE(Table1_2[Customer_Rating])
 
-- Total Tickets
-- Resolved Tickets
-- SLA Compliance %
-- Average Resolution Time
-- Average Customer Rating
-- Escalation Rate
+Escalated Tickets	Escalated Tickets = CALCULATE(COUNTROWS(Table1_2), Table1_2[Escalated] = "Yes")
 
-## 📈 Dashboard Analysis
-
-The dashboard provides insights into:
-
-- Ticket volume by month
-- Tickets by department
-- Tickets by region
-- SLA performance
-- Customer rating distribution
-- Escalation trends
-- Resolution performance
-
-## 🔍 Key Insights
-
-- Analyzed SLA performance across customer support tickets.
-- Evaluated customer satisfaction using customer ratings.
-- Analyzed ticket distribution across departments and regions.
-- Identified escalation patterns.
-- Compared resolution time against SLA targets.
-
-## 📂 Project Files
-
-- `Customer_Support_Data.xlsx` – Dataset
-- `Customer_Support_Dashboard.pbix` – Power BI dashboard
-- `Project_Log.xlsx` – Project log documenting the project workflow and analysis
-
-## 👩‍💻 Skills Demonstrated
-
-Excel | Power Query | Power BI | DAX | Data Cleaning | Data Visualization | KPI Analysis | Business Analysis
+Escalation Rate	Escalation Rate = DIVIDE([Escalated Tickets], [Total Tickets])
