@@ -1,17 +1,54 @@
-Total Tickets	Total Tickets = COUNTROWS(Table1_2)
+# Customer Support KPI Dashboard
 
-Resolved Tickets	Resolved Tickets = CALCULATE(COUNTROWS(Table1_2), Table1_2[Status] = "Resolved")
+## 📌 Project Overview
 
-SLA Met Tickets	SLA Met Tickets = CALCULATE(COUNTROWS(Table1_2), Table1_2[SLA_Status] = "SLA Met")
+This project analyzes customer support ticket data to evaluate support team performance and identify key operational trends.
 
-SLA Breached Tickets	SLA Breached Tickets = CALCULATE(COUNTROWS(Table1_2), Table1_2[SLA_Status] = "SLA Breached")
+The dashboard focuses on ticket volume, SLA compliance, resolution time, customer satisfaction, and escalation rates.
 
-SLA Compliance %	SLA Compliance % = DIVIDE([SLA Met Tickets], [SLA Met Tickets] + [SLA Breached Tickets])
+## 🛠️ Tools & Technologies
 
-Average Resolution Hours	Average Resolution Hours = AVERAGE(Table1_2[Resolution_Hours])
+- Microsoft Excel
+- Power BI
+- Power Query
+- DAX
 
-Average Customer Rating	Average Customer Rating = AVERAGE(Table1_2[Customer_Rating])
+## 📊 Key KPIs
 
-Escalated Tickets	Escalated Tickets = CALCULATE(COUNTROWS(Table1_2), Table1_2[Escalated] = "Yes")
+- Total Tickets
+- Resolved Tickets
+- SLA Compliance %
+- Average Resolution Time
+- Average Customer Rating
+- Escalation Rate
 
-Escalation Rate	Escalation Rate = DIVIDE([Escalated Tickets], [Total Tickets])
+## 📈 Dashboard Analysis
+
+The dashboard provides insights into:
+
+- Ticket volume by month
+- Tickets by department
+- Tickets by region
+- SLA performance
+- Customer rating distribution
+- Escalation trends
+- Resolution performance
+
+## 🔍 Key Insights
+
+- Analyzed SLA performance across customer support tickets.
+- Evaluated customer satisfaction using customer ratings.
+- Analyzed ticket distribution across departments and regions.
+- Identified escalation patterns.
+- Compared resolution time against SLA targets.
+
+## 📂 Project Files
+
+- `Customer_Support_Data.xlsx` – Dataset
+- `Customer_Support_Dashboard.pbix` – Power BI dashboard
+- `Project_Log.xlsx` – Project log documenting the project workflow and analysis
+- `Dashboard_Screenshot.png` – Dashboard preview *(to be added later)*
+
+## 👩‍💻 Skills Demonstrated
+
+Excel | Power Query | Power BI | DAX | Data Cleaning | Data Visualization | KPI Analysis | Business Analysis
