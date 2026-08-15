@@ -47,7 +47,6 @@ The dashboard provides insights into:
 - `Customer_Support_Data.xlsx` – Dataset
 - `Customer_Support_Dashboard.pbix` – Power BI dashboard
 - `Project_Log.xlsx` – Project log documenting the project workflow and analysis
-- `Dashboard_Screenshot.png` – Dashboard preview *(to be added later)*
 
 ## 👩‍💻 Skills Demonstrated
 
